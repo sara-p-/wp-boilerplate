@@ -19,6 +19,11 @@
             wp_register_script('jquery', ('//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'), '', '2.2.4', true);
             wp_enqueue_script('jquery');
 
+            wp_enqueue_script('aos', '//cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js', '', '', true);        
+            wp_enqueue_script('waypoints', '//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js', '', '', true); 
+            wp_enqueue_script('anime-js', '//cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js', '', '', true);         
+
+
             wp_enqueue_script('wp-vue', '//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js', '', '', true);        
             wp_enqueue_script('wp-boilerplate', get_template_directory_uri() . '/dist/main.js', '', '', true);        
         }
