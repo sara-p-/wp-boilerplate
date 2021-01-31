@@ -1,15 +1,32 @@
 footer {
-	background: #000;
-	.row {
+	@include disable-lists;
+	background: $black;
+	width: 100%;
+	.wrapper {
+		overflow: visible;
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
-		padding: 20px 0;
+		justify-content: flex-start;
 	}
-	ul {
-		@include clear-list();
+	nav.footer-menu {
+		background: $white;
+		width: 100%;
+		position: relative;
+		padding: 15px 0;
 	}
-	a {
-		color: #fff;
+	ul.social-menu {
+		display: flex;
+		width: 100%;
+		justify-content: flex-end;
+		align-items: center;
+		li {
+			margin-right: 20px;
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+		a {
+			font-size: 1.2em;
+		}
 	}
 }

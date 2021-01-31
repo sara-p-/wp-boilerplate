@@ -1,2 +1,9 @@
 .component.intro {
+	.content {
+		padding-bottom: $base-spacing;
+		@include tablet {
+			padding-bottom: $mobile-margin;
+			padding-top: 15px;
+		}
+	}
 }

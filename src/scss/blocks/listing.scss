@@ -1,2 +1,78 @@
-.block.listing {
+.listing {
+	.item {
+		margin-bottom: $bottom-margin;
+		min-height: 500px;
+		@include tablet {
+			min-height: auto;
+			margin-bottom: $mobile-margin;
+		}
+		.row {
+			display: flex;
+			@include tablet {
+				flex-direction: column-reverse;
+			}
+		}
+		.col {
+			display: block;
+			// border: $base-border;
+		}
+		&:nth-of-type(odd) {
+			.row {
+				flex-direction: row-reverse;
+				@include tablet {
+					flex-direction: column-reverse;
+				}
+			}
+			.col {
+				text-align: left;
+			}
+		}
+		&:nth-of-type(even) {
+			.col {
+				text-align: right;
+				h2.title:before {
+					right: 0;
+				}
+				p {
+					@include tablet {
+						margin-left: auto;
+					}
+				}
+			}
+		}
+		.col {
+			flex: 1 0 50%;
+			position: relative;
+		}
+		.content {
+			margin: 20px 60px 0 60px;
+			@include tablet {
+				margin: 20px 0;
+			}
+			p {
+				@include tablet {
+					width: 100%;
+					max-width: 400px;
+				}
+			}
+		}
+		.image {
+			width: 100%;
+			height: 500px;
+			@include tablet {
+				height: auto;
+				margin-bottom: 20px;
+			}
+			img {
+				height: 100%;
+				width: auto;
+				max-width: initial;
+				box-shadow: $box-shadow;
+				@include tablet {
+					height: auto;
+					width: 100%;
+				}
+			}
+		}
+	}
 }

@@ -1,70 +1,73 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=Oswald:wght@200;700&display=swap');
 
 // Paths
 $img-path: "../../static/";
 
 // Type
-$base-font-family: "Lato", sans-serif;
-$heading-font-family: "Lato", sans-serif;
+$base-font-family: "Open Sans", sans-serif;
+$heading-font-family: "Oswald", sans-serif;
 
 // Font Size
-$base-font-size: 18px;
-$desktop-font-size: 18px;
-$tablet-font-size: 18px;
-$mobile-font-size: 18px;
+$base-font-size: 24px;
+$desktop-font-size: 24px;
+$tablet-font-size: 16px;
+$mobile-font-size: 16px;
 
 // Line Height
-$base-line-height: 1.84;
+$base-line-height: 1.4;
 $heading-line-height: 1;
 
 // Font Weight
 $base-font-weight: 400;
-$heading-font-weight: 900;
+$heading-font-weight: 800;
 
 // Other Sizes
-$site-width: 1200px;
-$bottom-margin: 100px;
+$site-width: 1400px;
+$bottom-margin: 120px;
+$mobile-margin: $bottom-margin / 2;
 $base-border-radius: 0px;
-$base-spacing: 1.5em;
+$base-spacing: 60px;
 $small-spacing: $base-spacing / 2;
 
 // Colors
-$primary: #000;
-$secondary: #303030;
-$tertiary: #424242;
+$black: #000000;
+$white: #ffffff;
+$red: #E74C3C;
+$blue: #3498DB;
+
+$primary: $black;
+$secondary: $red;
+$tertiary: $blue;
 $links: $primary;
 $hover: $secondary;
 
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
-
-$black: #000000;
-$white: #ffffff;
-
 // Font Colors
-$base-font-color: #000;
+$base-font-color: $black;
 $action-color: $primary;
 $error-color: "red";
 
 $base-font-color: $black;
-$color-selection: $light-gray;
+$color-selection: $black;
 
 // Buttons
 $btn-bg-color: transparent;
 $btn-text-color: $black;
-$btn-text-color-hover: $white;
+$btn-text-color-hover: $black;
 $btn-border-radius: 0;
 
 // Border
 $base-border-color: $black;
-$base-border: 3px solid $base-border-color;
+$base-border: 5px solid $base-border-color;
+$btn-border: 3px solid $base-border-color;
+
+// Box Shadow
+$box-shadow: 3px 3px 15px 0px #777777;
 
 // Background Colors
 $viewport-background-color: $white;
 
 // Focus
-$focus-outline-color: $black;
+$focus-outline-color: $blue;
 $focus-outline-width: 3px;
 $focus-outline: $focus-outline-width solid $focus-outline-color;
 $focus-outline-offset: 10px;

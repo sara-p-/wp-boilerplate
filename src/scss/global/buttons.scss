@@ -14,21 +14,31 @@ button {
 .block {
 	.buttons .btn {
 		@include btn-base();
+		i {
+			font-size: .8em;
+			margin-left: 5px;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: -3px;
+			left: -3px;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			border: $btn-border;
+			background: $white;
+			transition: top 300ms, left 300ms;
+		}
+		&:hover {
+			&:after {
+				top: 5px;
+				left: 5px;
+			}
+		}
 	}
 	.buttons {
 		position: relative;
-		padding-top: 1rem;
-		padding-bottom: 5px;
-		z-index: 1;
-
-		margin-left: -1rem;
-		margin-right: -1rem;
-		.btn {
-			margin-left: 1rem;
-			margin-right: 1rem;
-		}
-	}
-	p + .buttons {
-		padding-top: 0; // Top padding for buttons under paragraphs
+		margin-top: 40px;
 	}
 }

@@ -1,2 +1,47 @@
-.block.hero {
+.hero {
+	.row {
+		display: flex;
+	}
+	.col {
+		flex: 1 0 50%;
+	}
+	.content {
+		padding: $bottom-margin 0;
+	}
+	.title {
+		span.line {
+			display: block;
+		}
+	}
+	.image {
+		display: block;
+	}
+	&.style-1 {
+		height: 100vh;
+		.row {
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100%;
+		}
+		.content {
+			padding: 20px 0;
+		}
+		.title {
+			overflow: hidden;
+			margin-top: 70px;
+			@include mobile-only {
+				@include heading-settings(19vw, $heading-font-family, 1);
+			}
+		}
+	}
+	&.style-2 {
+		.content {
+			padding: 0 0 $bottom-margin;
+			width: 100%;
+			max-width: 800px;
+		}
+		.title {
+			margin-bottom: $bottom-margin;
+		}
+	}
 }
