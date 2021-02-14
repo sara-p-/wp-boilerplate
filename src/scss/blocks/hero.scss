@@ -13,11 +13,6 @@
 	.content {
 		padding: $bottom-margin 0;
 	}
-	.title {
-		span.line {
-			display: block;
-		}
-	}
 	.image {
 		display: block;
 	}
@@ -46,16 +41,6 @@
 		}
 		a.down {
 			animation: arrow-bounce 1s ease-in-out infinite alternate;
-		}
-	}
-	&.style-2 {
-		.content {
-			padding: 0 0 $bottom-margin;
-			width: 100%;
-			max-width: 800px;
-		}
-		.title {
-			margin-bottom: $bottom-margin;
 		}
 	}
 }

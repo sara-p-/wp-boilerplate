@@ -86,3 +86,9 @@ blockquote {
 .animate-title .title .line span {
 	display: inline-block;
 }
+
+.title {
+	span.line {
+		display: block;
+	}
+}

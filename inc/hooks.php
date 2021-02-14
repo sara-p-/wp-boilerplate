@@ -5,6 +5,8 @@
     add_action('wp_enqueue_scripts', 'WP_Boilerplate::resources');
     add_action('after_setup_theme', 'WP_Boilerplate::setup_theme_slug');
     add_action('after_setup_theme', 'WP_Boilerplate::register_nav_menus', 0 );
+    add_action('init', 'WP_Boilerplate_CPT::project', 0 );
+    add_action('init', 'WP_Boilerplate_CPT::project_categories', 0 );
 
     //======================================================================
     // WORDPRESS FILTERS

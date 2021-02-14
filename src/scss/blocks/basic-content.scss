@@ -1,2 +1,16 @@
 .block.basic-content {
+    .row {
+		display: flex;
+	}
+	.col {
+		flex: 1 0 50%;
+	}
+    .content {
+        padding: 0 0 $bottom-margin;
+        width: 100%;
+        max-width: 800px;
+    }
+    .title {
+        margin-bottom: $bottom-margin;
+    }
 }
