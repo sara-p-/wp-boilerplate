@@ -12,8 +12,13 @@ button {
 
 // Theme Buttons
 .block {
-	.buttons .btn {
+	.buttons {
+		z-index: 1;
+		display: block;
+	} 
+	.btn {
 		@include btn-base();
+		background: $white;
 		i {
 			font-size: .8em;
 			margin-left: 5px;

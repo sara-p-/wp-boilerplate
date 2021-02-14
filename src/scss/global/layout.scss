@@ -20,16 +20,12 @@ html {
 html,
 body,
 main {
-	height: 100%;
+	height: auto;
 	width: 100%;
 	display: block;
 	position: relative;
 	margin: 0px;
 	padding: 0px;
-}
-
-main {
-	height: auto;
 }
 
 .wrapper,

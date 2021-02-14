@@ -1,23 +1,38 @@
 import "../scss/main.scss";
 
-// import AOS from 'aos';
-// import 'aos/dist/aos.css';
 
 import vue from "./components/vue";
 import styleGuide from "./components/styleguide";
 
 import menu from "./modules/menu";
-import animations from "./modules/animations";
+import titles from "./modules/titles";
+import workSlides from "./modules/work-slides";
+import loadingScreen from "./modules/loader";
+// import misc from "./modules/misc";
 
+
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/all.js";
+gsap.registerPlugin(ScrollToPlugin);
+ 
 
 document.addEventListener("DOMContentLoaded", function () {
 	vue();
 	styleGuide();
 
-	menu();
-	animations();
+	gsap.to(window, {
+		duration: 0,
+		scrollTo: 0,
+	});
 
-	// AOS.init({
-	// 	duration: 1200,
-	//   });
+
+	loadingScreen();
+
+	menu();
+	titles();
+	workSlides();
+	// misc();
+
+
+
 });

@@ -2,6 +2,7 @@ footer {
 	@include disable-lists;
 	background: $black;
 	width: 100%;
+	overflow: hidden;
 	.wrapper {
 		overflow: visible;
 		display: flex;
