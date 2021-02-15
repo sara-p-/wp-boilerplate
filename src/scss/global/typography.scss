@@ -91,4 +91,9 @@ blockquote {
 	span.line {
 		display: block;
 	}
+	&.animate-title {
+		.line span {
+			display: inline-block;
+		}
+	}
 }
