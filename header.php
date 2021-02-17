@@ -14,6 +14,10 @@
 
     <a href="#main" class="skip-nav">Skip navigation</a>
 
+    <?php if(is_front_page(  )) : ?>
+        <div class="loading-screen active"></div>
+    <?php endif; ?>
+
     <header>
         <div class="wrapper">
             <a href="#" id="nav-toggle" class="nav-toggle closed">

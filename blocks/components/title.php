@@ -13,7 +13,7 @@
 <?php if(have_rows('title')) : ?>
     <h1 class="title<?php echo $classes; ?>">
         <?php while(have_rows('title')) : the_row(); ?>
-            <span class="line"><?php the_sub_field('line'); ?></span>
+            <span class="line line-<?php echo get_row_index(); ?>"><?php the_sub_field('line'); ?></span>
         <?php endwhile; ?>
     </h1>
 <?php endif;?>
