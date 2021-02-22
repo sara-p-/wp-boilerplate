@@ -6,17 +6,19 @@ import { gsap } from 'gsap';
 
 export default function misc() {
 
-	// // Home Screen arrow bounce
-	// const arrow = gsap.timeline({
-	// 	repeat: -1,
-	// 	duration: 0.75,
-	// 	// ease: 'Elastic.easeOut',
-	// 	yoyo: true,
-	// })
-	// .to('.hero a.down', {
-	// 	y: '-3em',
-	// });
+	var arrow = document.querySelector('a.down');
 
-	// console.log(arrow);
+	// Home Screen arrow bounce
+	gsap.timeline({
+		repeat: -1,
+		duration: 0.75,
+		// ease: 'Elastic.easeOut',
+		yoyo: true,
+	})
+	.fromTo(arrow, {y: '-3em'}, {
+		y: 0,
+	});
+
+	console.log(arrow);
 	
 }

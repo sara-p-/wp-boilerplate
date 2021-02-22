@@ -1,11 +1,8 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
-
-
 gsap.registerPlugin(ScrollTrigger);
 
 export default function workSlides() {
-	console.log('gsap running');
 
 	const items = document.querySelectorAll('.listing .item'); // Getting all the items
 	const imagesLeft = [];
@@ -29,7 +26,7 @@ export default function workSlides() {
 			x: '0%',
 			scrollTrigger: {
 				trigger: item,
-				start: 'top 75%',
+				start: 'top 95%',
 			}
 		})
 	});
@@ -42,7 +39,7 @@ export default function workSlides() {
 			x: '0%',
 			scrollTrigger: {
 				trigger: item,
-				start: 'top 50%',
+				start: 'top 95%',
 			}
 		})
 	})

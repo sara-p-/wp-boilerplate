@@ -24,7 +24,7 @@
     $query = new WP_Query( $args );
 ?>
 
-<section id="<?php echo $block_id; ?>" class="block listing">
+<section id="<?php echo $the_block_id; ?>" class="block listing">
 	<div class="component intro">
 		<div class="wrapper">
 			<div class="row">

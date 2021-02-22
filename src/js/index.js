@@ -8,7 +8,7 @@ import menu from "./modules/menu";
 import titles from "./modules/titles";
 import workSlides from "./modules/work-slides";
 import loadingScreen from "./modules/loader";
-// import misc from "./modules/misc";
+import misc from "./modules/misc";
 
 
 import { gsap } from "gsap";

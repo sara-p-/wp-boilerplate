@@ -1,9 +1,9 @@
 @keyframes arrow-bounce {
-	from {transform: translateY(-30px)}
+	from {transform: translateY(-20px)}
 	to {transform: translateY(0px)}
 }
 
-.hero {
+.block.hero {
 	.row {
 		display: flex;
 	}
@@ -39,7 +39,13 @@
 				margin-top: 90px;
 			}
 		}
-		a.down {
+		.buttons {
+			margin-top: 0;
+			margin-bottom: 20px;
+		}
+		a.down i {
+			display: inline-block;
+			transform: translateZ(0);
 			animation: arrow-bounce 1s ease-in-out infinite alternate;
 		}
 	}

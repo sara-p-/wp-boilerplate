@@ -5,7 +5,6 @@ gsap.registerPlugin(ScrollToPlugin);
 
 
 export default function menu() {
-	console.log('menu js loaded');
 
 	const hamburger = document.querySelector('.hamburger-menu');
 	const toggle = document.querySelector('.nav-toggle');

@@ -1,4 +1,4 @@
-header a:not([href='#']:not(.logo)) {
+header a:not([href='#']):not(.logo) {
     font-weight: 400;
     transition: font-weight $base-timing ease-in-out;
     &.active {

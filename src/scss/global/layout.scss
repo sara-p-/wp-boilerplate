@@ -28,6 +28,12 @@ main {
 	padding: 0px;
 }
 
+body {
+	background-image: url('/assets/img/background2.svg');
+	background-size: 35px;
+	background-repeat: repeat;
+}
+
 .wrapper,
 .wp-block-group__inner-container {
 	width: auto; // For whatever reason this fixes the wrapper from being wider than the body

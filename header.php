@@ -1,5 +1,6 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
+<?php 	$template_directory = get_template_directory_uri(); ?>
 
 <head>
     <?php if (is_search()) { ?>
@@ -7,6 +8,14 @@
     <?php } ?>
     <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>">
     <?php wp_head(); ?>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $template_directory; ?>/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $template_directory; ?>/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $template_directory; ?>/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="<?php echo $template_directory; ?>/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="<?php echo $template_directory; ?>/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
 </head>
 
@@ -56,41 +65,7 @@
                             ?>
                             <?php wp_nav_menu($args); ?>
                         </ul>
-                        <?php if (have_rows('social', 'option')) : ?>
-                            <ul class="menu social-menu">
-                                <?php while (have_rows('social', 'option')) : the_row(); ?>
-                                    <?php
-                                    $network = get_sub_field('network');
-                                    $link = get_sub_field('link');
-                                    if ($link) {
-                                        $link_url = $link['url'];
-                                        $link_title = $link['title'];
-                                        $link_target = $link['target'];
-                                        if ($link_target == NULL) {
-                                            $link_target = '_self';
-                                        }
-                                    }
-                                    ?>
-                                    <?php if ($network == 'facebook' && $link) : ?>
-                                        <li class="menu-item"><a href="<?php echo esc_url($link_url); ?>" target="<?php echo $link_target; ?>"><span class="visually-hide-text"><?php echo $link_title; ?></span><i class="fab fa-facebook-f icon"></i></a></li>
-                                    <?php elseif ($network == 'twitter' && $link) : ?>
-                                        <li class="menu-item"><a href="<?php echo esc_url($link_url); ?>" target="<?php echo $link_target; ?>"><span class="visually-hide-text"><?php echo $link_title; ?></span><i class="fab fa-twitter icon"></i></a></li>
-                                    <?php elseif ($network == 'instagram' && $link) : ?>
-                                        <li class="menu-item"><a href="<?php echo esc_url($link_url); ?>" target="<?php echo $link_target; ?>"><span class="visually-hide-text"><?php echo $link_title; ?></span><i class="fab fa-instagram icon"></i></a></li>
-                                    <?php elseif ($network == 'snapchat' && $link) : ?>
-                                        <li class="menu-item"><a href="<?php echo esc_url($link_url); ?>" target="<?php echo $link_target; ?>"><span class="visually-hide-text"><?php echo $link_title; ?></span><i class="fab fa-snapchat icon"></i></a></li>
-                                    <?php elseif ($network == 'pinterest' && $link) : ?>
-                                        <li class="menu-item"><a href="<?php echo esc_url($link_url); ?>" target="<?php echo $link_target; ?>"><span class="visually-hide-text"><?php echo $link_title; ?></span><i class="fab fa-pinterest icon"></i></a></li>
-                                    <?php elseif ($network == 'googleplus' && $link) : ?>
-                                        <li class="menu-item"><a href="<?php echo esc_url($link_url); ?>" target="<?php echo $link_target; ?>"><span class="visually-hide-text"><?php echo $link_title; ?></span><i class="fab fa-googleplus icon"></i></a></li>
-                                    <?php elseif ($network == 'linkedin' && $link) : ?>
-                                        <li class="menu-item"><a href="<?php echo esc_url($link_url); ?>" target="<?php echo $link_target; ?>"><span class="visually-hide-text"><?php echo $link_title; ?></span><i class="fab fa-linkedin-in icon"></i></a></li>
-                                    <?php elseif ($network == 'youtube' && $link) : ?>
-                                        <li class="menu-item"><a href="<?php echo esc_url($link_url); ?>" target="<?php echo $link_target; ?>"><span class="visually-hide-text"><?php echo $link_title; ?></span><i class="fab fa-youtube icon"></i></a></li>
-                                    <?php endif; ?>
-                                <?php endwhile; ?>
-                            </ul>
-                        <?php endif; ?>
+                        <?php include( locate_template('./blocks/components/social-menu.php') ); ?>
                     </div>
                 </div>
             </nav>

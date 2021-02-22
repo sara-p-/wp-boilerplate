@@ -116,6 +116,7 @@ nav.top-menu {
 			padding-bottom: 5px;
 			position: relative;
 			display: block;
+			text-transform: lowercase;
 			&:after {
 				content: "";
 				position: absolute;
