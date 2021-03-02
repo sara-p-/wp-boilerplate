@@ -17,6 +17,12 @@ export default function loadingScreen() {
 			delay: 2,
 			ease:'expo.out',
 		})
+		.to('.hero.style-1 .title', { 
+			duration: 0,
+			onStart: () => {
+				document.querySelector('.hero.style-1 .title').classList.remove('clear');
+			}, 
+		})
 		.fromTo('.hello-letter', {y: '-2em'}, {
 			y: 0,
 			duration: .5,

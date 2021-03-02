@@ -31,11 +31,14 @@
 			margin-top: 70px;
 			z-index: 101;
 			overflow: hidden;
+			&.clear {
+				opacity: 0;
+			}
 			&.done {
 				z-index: initial;
 			}
 			@include mobile-only {
-				@include heading-settings(19vw, $heading-font-family, 1);
+				@include heading-settings(19vw, $heading-font-family, 1.1);
 				margin-top: 90px;
 			}
 		}

@@ -16,7 +16,7 @@
 }
 
 // Styleguide
-@mixin heading-settings($size, $font: $heading-font-family, $height: 1, $margin: 30px, $transform: uppercase) {
+@mixin heading-settings($size, $font: $heading-font-family, $height: 1, $margin: 1.25rem, $transform: uppercase) {
   font-size: $size;
   font-family: $font;
   line-height: $height;
@@ -110,7 +110,7 @@
 	display: inline-block;
 	padding: 5px 15px;
 	font-family: $base-font-family;
-	font-size: $base-font-size;
+	font-size: 1rem;
 	-webkit-font-smoothing: antialiased;
 	// font-weight: 600;
 	// line-height: 1.4;

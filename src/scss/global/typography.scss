@@ -1,15 +1,18 @@
-html,
-.p {
+html {
 	font-family: $base-font-family;
 	font-weight: $base-font-weight;
 	line-height: $base-line-height;
 	font-size: $base-font-size;
 	-webkit-font-smoothing: antialiased;
 	color: $base-font-color;
+	@include mobile-only {
+		font-size: $mobile-font-size;
+	}
 }
 
 p {
-	margin: 0 0 30px 0;
+	font-size: 1rem;
+	margin: 0 0 1.25rem 0;
 	a {
 		color: $blue;
 	}
@@ -21,14 +24,14 @@ h1, h2, h3, h4, h5, h6 {
 
 h1,
 .h1 {
-	@include heading-settings(9.7em, $heading-font-family, 1);
+	@include heading-settings(9.7rem, $heading-font-family, 1);
 	@include small-desktop {
 		@include heading-settings(20vw, $heading-font-family, 1);
 	}
 }
 h2,
 .h2 {
-	@include heading-settings(2.5em);
+	@include heading-settings(2.5rem);
 	position: relative;
 	&:before {
 		position: absolute;
@@ -38,17 +41,23 @@ h2,
 		height: 5px;
 		background-color: $black;
 	}
+	@include tablet {
+		@include heading-settings(3rem);
+	}
 }
 h3,
 .h3 {
-	@include heading-settings(0.8em, $base-font-family, 1.2);
+	@include heading-settings(0.8rem, $base-font-family, 1.2);
 	font-weight: 800;
 	letter-spacing: 0.6px;
+	@include tablet {
+		@include heading-settings(1.1rem, $base-font-family, 1.3);
+	}
 }
 h4,
 .h4,
 h1.label {
-	@include heading-settings(1.5em, $base-font-family);
+	@include heading-settings(1.5rem, $base-font-family);
 }
 
 a {

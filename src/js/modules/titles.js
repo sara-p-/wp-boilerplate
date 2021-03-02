@@ -17,7 +17,7 @@ export default function titles() {
 			y: 0,
 			scrollTrigger: {
 				trigger: section,
-				start: 'top 50%',
+				start: 'top 95%',
 			}
 		});
 		

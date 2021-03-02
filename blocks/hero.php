@@ -3,7 +3,7 @@
     $style = get_sub_field('style');
 ?>
 
-<section id="<?php echo $the_block_id; ?>" class="block hero<?php echo ' ' . $style; ?>">
+<section id="<?php echo $the_block_id; ?>" class="block hero clear<?php echo ' ' . $style; ?>">
 	<div class="wrapper">
 		<div class="row">
             <?php include( locate_template('./blocks/components/title.php') ); ?>

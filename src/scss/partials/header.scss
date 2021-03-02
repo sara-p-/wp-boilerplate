@@ -47,9 +47,12 @@ header {
 		padding: 15px 0;
 	}
 	.logo {
-		@include heading-settings(1em, $heading-font-family, 1);
+		@include heading-settings(1.1rem, $heading-font-family, 1);
 		font-weight: 800;
 		color: $black;
+		@include tablet {
+			@include heading-settings(1.4rem);
+		}
 	}
 }
 

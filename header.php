@@ -6,7 +6,8 @@
     <?php if (is_search()) { ?>
         <meta name="robots" content="noindex, nofollow">
     <?php } ?>
-    <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>">
+    <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>" charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
 
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $template_directory; ?>/assets/favicon/apple-touch-icon.png">
